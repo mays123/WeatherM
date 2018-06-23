@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">WeatherM</string>
+    <string name="no_net">No internet connection</string>
+    <string name="error_msg">Sorry,something went wrong</string>
+    <string name="try_again_question">Do you want to try again?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="done">Done</string>
+
+    <string name="welcome_to_our_weather_app">Welcome to our Weather App</string>
+    <string name="please_select_your_country_and_city">Please select your country and city respectively</string>
+    <string name="country">Country</string>
+    <string name="city">City</string>
+    <string name="submit">Submit</string>
+    <string name="search">Search…</string>
+    <string name="weather_image">Weather image</string>
+    <string name="degree">%1$s&#xb0;</string>
+    <string name="wind">Wind</string>
+    <string name="wind_value">N %1$s mph</string>
+    <string name="humidity">Humidity</string>
+    <string name="pressure">Pressure</string>
+    <string name="pressure_value">%1$s in</string>
+    <string name="error">Error</string>
+    <string name="select_country_msg">Please select the country</string>
+
+</resources>

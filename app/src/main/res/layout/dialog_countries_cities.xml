@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="1000dp"
+    android:minHeight="1000dp"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.SearchView
+        android:id="@+id/svCountriesCities"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:queryHint="@string/search"
+        android:background="@color/colorPrimaryDark"
+        />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvCountriesCities"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

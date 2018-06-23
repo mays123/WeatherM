@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rgUnits"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:divider="@color/colorDivider"
+    android:orientation="horizontal"
+    android:showDividers="middle">
+
+    <RadioButton
+        android:id="@+id/rbCelsius"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/selector_celsius"
+        android:button="@android:color/transparent"
+        android:checked="true" />
+
+    <RadioButton
+        android:id="@+id/rbFahrenheit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/selector_fahrenheit"
+        android:button="@android:color/transparent"
+        android:checked="false" />
+
+</RadioGroup>

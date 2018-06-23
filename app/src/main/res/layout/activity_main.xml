@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary">
+
+    <include layout="@layout/toolbar_white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+       >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/welcome_to_our_weather_app"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="16sp"
+            android:layout_marginStart="@dimen/app_standard_space"
+            android:layout_marginEnd="@dimen/app_standard_space"
+            android:layout_marginBottom="32dp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginStart="@dimen/app_standard_space"
+            android:layout_marginEnd="@dimen/app_standard_space"
+            android:background="@color/colorWindowBackground"
+            android:padding="@dimen/app_standard_space">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/app_standard_space"
+                android:text="@string/please_select_your_country_and_city"
+                android:textColor="@color/darkGrey"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvCountry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/app_standard_space"
+                android:text="@string/country"
+                android:gravity="center_horizontal"
+                android:padding="@dimen/app_standard_space"
+                android:background="@drawable/shape_border"
+                android:textColor="@color/grey" />
+
+            <TextView
+                android:id="@+id/tvCity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/app_standard_space"
+                android:text="@string/city"
+                android:gravity="center_horizontal"
+                android:padding="@dimen/app_standard_space"
+                android:background="@drawable/shape_border"
+                android:textColor="@color/grey" />
+
+
+            <Button
+                android:id="@+id/bMainSubmit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="32dp"
+                android:background="@color/colorPrimaryDark"
+                android:paddingEnd="48dp"
+                android:paddingStart="48dp"
+                android:text="@string/submit" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>
