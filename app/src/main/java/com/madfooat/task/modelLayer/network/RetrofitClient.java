@@ -24,11 +24,11 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetrofitClient {
 
-    private static Retrofit retrofit = null;
+    private static APIs apis = null;
 
 
-    private static Retrofit getClient(String baseUrl) {
-        if (retrofit == null) {
+    private static APIs getClient() {
+        if (apis == null) {
 
             HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
             interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
@@ -41,12 +41,14 @@ public class RetrofitClient {
                         .sslSocketFactory(new TLSSocketFactory(), trustManager)
                         .build();
 
-                retrofit = new Retrofit.Builder()
-                        .baseUrl(baseUrl)
+                Retrofit retrofit = new Retrofit.Builder()
+                        .baseUrl(Constants.DEFAULT_BASE_URL)
                         .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
                         .addConverterFactory(GsonConverterFactory.create())
                         .client(client)
                         .build();
+
+                apis = retrofit.create(APIs.class);
 
             } catch (KeyManagementException e) {
                 e.printStackTrace();
@@ -54,10 +56,10 @@ public class RetrofitClient {
                 e.printStackTrace();
             }
 
-            return retrofit;
+            return apis;
         }
 
-        return retrofit;
+        return apis;
     }
 
     private static X509TrustManager getTrustManager() {
@@ -85,6 +87,6 @@ public class RetrofitClient {
     }
 
     static APIs getRetrofitApis() {
-        return RetrofitClient.getClient(Constants.DEFAULT_BASE_URL).create(APIs.class);
+        return getClient();
     }
 }
